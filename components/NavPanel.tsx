@@ -1,0 +1,52 @@
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { useRouter } from 'expo-router';
+
+export default function NavPanel() {
+  const router = useRouter();
+
+  return (
+    <View style={styles.nav}>
+      <Text style={styles.logo}>DigiPal</Text>
+      <View style={styles.links}>
+        {/* <TouchableOpacity onPress={() => router.push('/')}>
+          <Text style={styles.link}>Home</Text>
+        </TouchableOpacity> */}
+
+        <TouchableOpacity>
+          <View>
+            <Image source={require('@/assets/images/img/logo.png')} style={{ width: 35, height: 35 }} />
+          </View>
+        </TouchableOpacity>
+
+        {/* <TouchableOpacity onPress={() => router.push('/about')}>
+          <Text style={styles.link}>About</Text>
+        </TouchableOpacity>*/}
+
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  nav: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    backgroundColor: 'lightgrey',
+  },
+  logo: {
+    color: '#black',
+    fontSize: 25,
+    fontWeight: 'bold',
+  },
+  links: {
+    flexDirection: 'row',
+  },
+  link: {
+    color: 'black',
+    fontSize: 16,
+    marginLeft: 16,
+  },
+});
