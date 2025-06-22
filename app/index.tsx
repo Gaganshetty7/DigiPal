@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
-import NavPanel from "../components/NavPanel";
+import { StyleSheet, Text, View, Image } from "react-native";
+import BottomNav from "@/components/BottomNav";
 
 export default function Index() {
   return (
     
       <View style={styles.mainContainer}>
+
         {/* Toggle Label + Switch */}
         <View style={styles.travMode_Container}>
           <Text style={styles.toggle_lbl}>Travel Mode</Text>
@@ -13,14 +14,36 @@ export default function Index() {
           </View>
         </View>
 
-        {/* Canvas Below Toggle */}
+        {/* Canvas Below Toggle - trackButton_Canvas */}
         <View style={styles.trackButton_Canvas} >
           <View style={styles.trackButton_ImageContainer}>
-
+            
           </View>
+
           <View style={styles.trackButton_Container}>
+            <View style={styles.trackButton_Container_info}>
+              <Text style={styles.trackButton_Container_info_lbl1} >Beeri</Text>
+              <Text style={styles.trackButton_Container_info_lbl2} >Mangalore, KA</Text>
+            </View>
+
+            <View style={styles.trackButton_Container_link}>
+              <Text style={styles.trackButton_Container_link_lbl} >Start tracking</Text>
+              <Image source={require('@/assets/images/img/ec_right_icon.png')} style={styles.trackButton_Container_link_icon} />
+            </View>
 
           </View>
+        </View>
+
+        {/* SOS-Button */}
+        <View style={styles.SOSButton}>
+          <Image source={require('@/assets/images/img/sos_icon.png')} style={styles.SOSicon} />
+          <Text style={styles.SOSlbl}>SOS</Text>
+        </View>
+
+        {/* EmergencyContacts-Button */}
+        <View style={styles.EmergencyContactsButton}>
+          <Text style={styles.EmergencyContactsButton_lbl}>Quick Contacts</Text>
+          <Image source={require('@/assets/images/img/ec_right_icon.png')} style={styles.EmergencyContactsButton_icon} />
         </View>
 
       </View>
@@ -31,9 +54,10 @@ export default function Index() {
 const styles = StyleSheet.create({
   mainContainer:{
     flex: 1,
-    marginHorizontal: 20,
-    marginVertical: 15,
+    paddingHorizontal: 15,
+    paddingVertical: 15,
     flexDirection: "column",
+    backgroundColor: "white",
   },
   travMode_Container:{
     flexDirection: "row",
@@ -64,20 +88,101 @@ const styles = StyleSheet.create({
   },
   trackButton_Canvas: {
     width: "100%",
-    height: 450,
+    height: 437,
     backgroundColor: "lightgrey",
+    borderWidth:2,
+    borderColor: "#e7e7e7",
     borderRadius: 25,
     overflow: "hidden"
   },
   trackButton_ImageContainer:{
     flex:5,
-    backgroundColor: "white"
+    backgroundColor: "gray"
   },
   trackButton_Container:{
     flex:1,
-    backgroundColor: "gray"
+    flexDirection: "row",
+    backgroundColor: "white",
+  },
+  trackButton_Container_info:{
+    flex: 1.2,
+    paddingLeft: 15,
+    paddingBottom: 1,
+    justifyContent: "center",
+    flexDirection: "column",
+  },
+  trackButton_Container_info_lbl1: {
+    fontSize: 22,
+    color: "black",
+    fontWeight: 700
+  },
+  trackButton_Container_info_lbl2: {
+    fontSize: 18,
+    color: "black",
+    fontWeight: 400
+  },
+  trackButton_Container_link: {
+    flex: 1,
+    paddingRight: 10,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center"
+  },
+  trackButton_Container_link_lbl: {
+    fontSize: 18,
+    color: "blue",
+    fontWeight: 400
+  },
+  trackButton_Container_link_icon: {
+    width: 24,
+    height: 24,
+    resizeMode: "contain"
+  },
+  SOSButton: {
+    width: "100%",
+    height: 85,
+    backgroundColor: "#AA3737",
+    borderWidth:2,
+    borderColor: "#e7e7e7",
+    marginTop: 15,
+    borderRadius: 25,
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  SOSlbl: {
+    color: "white",
+    fontSize: 24,
+    fontWeight: 700,
+    textAlign: "center"
+  },
+  SOSicon: {
+    width: 35,
+    height: 35
+  },
+  EmergencyContactsButton: {
+    paddingHorizontal: 15,
+    width: "100%",
+    height: 85,
+    borderWidth:2,
+    borderColor: "#e7e7e7",
+    borderRadius: 25,
+    marginTop: 15,
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row"
+  },
+  EmergencyContactsButton_lbl: {
+    marginLeft: 5,
+    fontSize: 22,
+    color: "black",
+    fontWeight: 400
+  },
+  EmergencyContactsButton_icon: {
+    width: 35,
+    height: 35,
+    resizeMode: "contain"
   }
-  
 }); 
 
 
