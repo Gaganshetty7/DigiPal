@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import BottomNav from "@/components/BottomNav";
 
 export default function Index() {
@@ -16,9 +16,9 @@ export default function Index() {
 
         {/* Canvas Below Toggle - trackButton_Canvas */}
         <View style={styles.trackButton_Canvas} >
-          <View style={styles.trackButton_ImageContainer}>
+          <TouchableOpacity style={styles.trackButton_ImageContainer}>
             
-          </View>
+          </TouchableOpacity>
 
           <View style={styles.trackButton_Container}>
             <View style={styles.trackButton_Container_info}>
@@ -26,25 +26,25 @@ export default function Index() {
               <Text style={styles.trackButton_Container_info_lbl2} >Mangalore, KA</Text>
             </View>
 
-            <View style={styles.trackButton_Container_link}>
+            <TouchableOpacity style={styles.trackButton_Container_link}>
               <Text style={styles.trackButton_Container_link_lbl} >Start tracking</Text>
               <Image source={require('@/assets/images/img/ec_right_icon.png')} style={styles.trackButton_Container_link_icon} />
-            </View>
+            </TouchableOpacity>
 
           </View>
         </View>
 
         {/* SOS-Button */}
-        <View style={styles.SOSButton}>
+        <TouchableOpacity style={styles.SOSButton}>
           <Image source={require('@/assets/images/img/sos_icon.png')} style={styles.SOSicon} />
           <Text style={styles.SOSlbl}>SOS</Text>
-        </View>
+        </TouchableOpacity>
 
         {/* EmergencyContacts-Button */}
-        <View style={styles.EmergencyContactsButton}>
+        <TouchableOpacity style={styles.EmergencyContactsButton}>
           <Text style={styles.EmergencyContactsButton_lbl}>Quick Contacts</Text>
           <Image source={require('@/assets/images/img/ec_right_icon.png')} style={styles.EmergencyContactsButton_icon} />
-        </View>
+        </TouchableOpacity>
 
       </View>
 
@@ -122,11 +122,10 @@ const styles = StyleSheet.create({
     fontWeight: 400
   },
   trackButton_Container_link: {
-    flex: 1,
-    paddingRight: 10,
+    marginHorizontal: 10,
     flexDirection: "row",
-    justifyContent: "flex-end",
-    alignItems: "center"
+    alignItems: "center",
+    alignSelf: "center"
   },
   trackButton_Container_link_lbl: {
     fontSize: 18,
