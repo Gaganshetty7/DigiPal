@@ -8,6 +8,7 @@ export default function NavPanel() {
     <View style={styles.nav}>
       <Text style={styles.logo}>DigiPal</Text>
       <View style={styles.links}>
+        
         {/* <TouchableOpacity onPress={() => router.push('/')}>
           <Text style={styles.link}>Home</Text>
         </TouchableOpacity> */}
