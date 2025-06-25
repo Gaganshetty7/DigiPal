@@ -58,7 +58,7 @@ export default function Index() {
 
             <TouchableOpacity style={styles.trackButton_Container_link}>
               <Text style={styles.trackButton_Container_link_lbl} >Start tracking</Text>
-              <Image source={require('@/assets/images/img/ec_right_icon.png')} style={styles.trackButton_Container_link_icon} />
+              <Image source={require('@/assets/images/img/right_shift_icon.png')} style={styles.trackButton_Container_link_icon} />
             </TouchableOpacity>
 
           </View>
@@ -73,7 +73,7 @@ export default function Index() {
         {/* EmergencyContacts-Button */}
         <TouchableOpacity style={styles.EmergencyContactsButton} onPress = {() => {router.push("/emergency_contacts_page")}}> 
           <Text style={styles.EmergencyContactsButton_lbl}>Quick Contacts</Text>
-          <Image source={require('@/assets/images/img/ec_right_icon.png')} style={styles.EmergencyContactsButton_icon} />
+          <Image source={require('@/assets/images/img/right_shift_icon.png')} style={styles.EmergencyContactsButton_icon} />
         </TouchableOpacity>
 
       </View>
