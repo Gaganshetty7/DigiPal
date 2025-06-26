@@ -15,7 +15,7 @@ export default function NavPanel() {
 
         <TouchableOpacity>
           <View style={styles.profile_img_container}>
-            <Image source={require('@/assets/images/img/logo.png')} style={styles.profile_img} />
+            <Image source={require('@/assets/images/img/profile_icon.png')} style={styles.profile_img} />
           </View>
         </TouchableOpacity>
 
@@ -58,8 +58,7 @@ const styles = StyleSheet.create({
     borderColor: "#e7e7e7",
     borderRadius: 25,
     alignItems: 'center',
-    justifyContent: 'center',
-    resizeMode: 'contain',
+    justifyContent: 'center'
   },
   profile_img: 
   { 
