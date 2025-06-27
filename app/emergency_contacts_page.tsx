@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
   left_shift_icon: {
     width: 27,
     height: 27,
+    resizeMode: "contain"
   },
   quick_contacts_container:{
     borderWidth: 2,
