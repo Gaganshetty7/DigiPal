@@ -1,14 +1,14 @@
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import {  View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 
-export default function NavPanel() {
+export default function NavPanel({ onMenuPress }: { onMenuPress?: () => void }) {
   const router = useRouter();
 
   return (
     <View style={styles.nav}>
       <Text style={styles.logo}>DigiPal</Text>
 
-        <TouchableOpacity style={styles.profile_img_container}>
+        <TouchableOpacity style={styles.hamburg_container} onPress={onMenuPress}>
             <Image source={require('@/assets/images/img/hamburger.png')} style={styles.hamburg_icon} />
         </TouchableOpacity>
 
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
   },
-  profile_img_container: 
+  hamburg_container: 
   { 
     width: 35,
     height: 35,
