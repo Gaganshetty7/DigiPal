@@ -45,24 +45,27 @@ export default function Index() {
         </View>
 
         {/* Canvas Below Toggle - trackButton_Canvas */}
-        <View style={styles.trackButton_Canvas} >
-          <TouchableOpacity style={styles.trackButton_ImageContainer}>
-            
-          </TouchableOpacity>
-
-          <View style={styles.trackButton_Container}>
-            <View style={styles.trackButton_Container_info}>
-              <Text style={styles.trackButton_Container_info_lbl1} >Beeri</Text>
-              <Text style={styles.trackButton_Container_info_lbl2} >Mangalore, KA</Text>
+        
+        <TouchableWithoutFeedback onPress={() => {router.push("/tracking_details_page")}}>
+          <View style={styles.trackButton_Canvas} >
+            <View style={styles.trackButton_ImageContainer} >
+              
             </View>
 
-            <TouchableOpacity style={styles.trackButton_Container_link}>
-              <Text style={styles.trackButton_Container_link_lbl} >Start tracking</Text>
-              <Image source={require('@/assets/images/img/right_shift_icon.png')} style={styles.trackButton_Container_link_icon} />
-            </TouchableOpacity>
+            <View style={styles.trackButton_Container}>
+              <View style={styles.trackButton_Container_info}>
+                <Text style={styles.trackButton_Container_info_lbl1} >Beeri</Text>
+                <Text style={styles.trackButton_Container_info_lbl2} >Mangalore, KA</Text>
+              </View>
 
+              <TouchableOpacity style={styles.trackButton_Container_link}>
+                <Text style={styles.trackButton_Container_link_lbl} >Start tracking</Text>
+                <Image source={require('@/assets/images/img/right_shift_icon.png')} style={styles.trackButton_Container_link_icon} />
+              </TouchableOpacity>
+
+            </View>
           </View>
-        </View>
+        </TouchableWithoutFeedback>
 
         {/* SOS-Button */}
         <TouchableOpacity style={styles.SOSButton}>

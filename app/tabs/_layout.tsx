@@ -3,7 +3,7 @@ import NavPanel from "@/components/NavPanel";
 import SideDrawer from "@/components/SideDrawer";
 import { Slot, useRouter, usePathname } from "expo-router";
 import { useEffect, useState } from "react";
-import { BackHandler, View, Pressable, StyleSheet, Text } from "react-native";
+import { BackHandler, View, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "expo-blur";
 
 export default function TabsLayout() {
