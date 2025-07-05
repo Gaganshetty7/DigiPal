@@ -58,7 +58,7 @@ export default function Index() {
                 <Text style={styles.trackButton_Container_info_lbl2} >Mangalore, KA</Text>
               </View>
 
-              <TouchableOpacity style={styles.trackButton_Container_link}>
+              <TouchableOpacity style={styles.trackButton_Container_link} onPress={() => {router.push("/start_tracking_page")}}>
                 <Text style={styles.trackButton_Container_link_lbl} >Start tracking</Text>
                 <Image source={require('@/assets/images/img/right_shift_icon.png')} style={styles.trackButton_Container_link_icon} />
               </TouchableOpacity>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "white",
     borderWidth: 1,
-    borderColor: "rgba(0, 0, 0, 0.76)",
+    borderColor: "rgba(96, 96, 96, 0.66)",
     justifyContent: "center",
     paddingHorizontal: 5,
   },
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     height: 20,
     backgroundColor: "#BFBEBE",
     borderWidth: 1,
-    borderColor: "rgba(0, 0, 0, 0.3)",
+    borderColor: "rgba(96, 96, 96, 0.5)",
     borderRadius: 10,
     alignSelf: "flex-start"
   },
@@ -126,13 +126,13 @@ const styles = StyleSheet.create({
     height: 437,
     backgroundColor: "lightgrey",
     borderWidth:2,
-    borderColor: "#e7e7e7",
+    borderColor: "rgba(96, 96, 96, 0.5)",
     borderRadius: 25,
     overflow: "hidden"
   },
   trackButton_ImageContainer:{
     flex:5,
-    backgroundColor: "gray"
+    backgroundColor: "lightblue"
   },
   trackButton_Container:{
     flex:1,

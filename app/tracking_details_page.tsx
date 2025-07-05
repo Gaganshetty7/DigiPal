@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
    PageContainer: {
     height: "100%",
     flexDirection:"column",
-    backgroundColor:"pink"
   },
   HeaderContainer:{
     height: "8%",
