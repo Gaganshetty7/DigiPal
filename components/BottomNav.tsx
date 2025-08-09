@@ -10,7 +10,7 @@ export default function BottomNav() {
   const tabs = [
     {name: "Home", route:"/tabs", icon: require('../assets/images/img/home.png')},
     {name: "Checkins", route:"/tabs/checkin_tab", icon: require('../assets/images/img/notification.png')},
-    {name: "Inbox", route:"/tabs/inbox_tab", icon: require('../assets/images/img/inbox.png')},
+    {name: "Inbox", route:"/tabs/inbox_tab/", icon: require('../assets/images/img/inbox.png')},
     {name: "Profile", route:"/tabs/profile_tab", icon: require('../assets/images/img/profile_icon.png')},
   ];
 

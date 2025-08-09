@@ -12,8 +12,17 @@ export default function TabsLayout() {
 
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  const isChatScreen = pathname.includes('/chat/');
+
   useEffect(() => {
     const backAction = () => {
+
+      // If on a chat screen, go back to inbox tab
+      if (isChatScreen) {
+        router.push('/tabs/inbox_tab');
+        return true;
+      }
+
       if (pathname !== "/tabs") {
         router.replace("/tabs");
         return true;
@@ -27,16 +36,16 @@ export default function TabsLayout() {
     );
 
     return () => backHandler.remove(); // Cleanup on unmount
-  }, [pathname]);
+  }, [pathname, isChatScreen, router]);
 
   return(
     <>
-      <NavPanel onMenuPress={() => setDrawerOpen(true)} />
+      {!isChatScreen &&<NavPanel onMenuPress={() => setDrawerOpen(true)} />}
       <Slot />
-      <BottomNav />
+      {!isChatScreen && <BottomNav />}
       
       {/* Render the sidebar if it's open */}
-      {drawerOpen && (
+      {drawerOpen && !isChatScreen && (
         <View style={StyleSheet.absoluteFill}>
           {/* Blur the background */}
           <BlurView intensity={100} tint="light" style={StyleSheet.absoluteFill} />
